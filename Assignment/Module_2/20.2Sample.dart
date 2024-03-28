@@ -1,11 +1,10 @@
 // Write a Program to print the 51 to 60 using while loop
 void main()
 {
-  var i=51;
-   while(i<=60){  //condition
-    print(i); 
-    i++; //increment
-   }
+ for(var i=51; i<=60; i++)
+ {
+  print(i);
+ }
 }
 
 

@@ -4,7 +4,6 @@ class VideoPage extends StatelessWidget {
   final List<Map<String, String>> videoItems = [
     {'title': 'Video 1', 'thumbnail': 'assets/video1.jpg'},
     {'title': 'Video 2', 'thumbnail': 'assets/video2.jpg'},
-    // Add more videos
   ];
 
    VideoPage({super.key});

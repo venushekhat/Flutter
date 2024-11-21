@@ -11,28 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        buttonTheme: const ButtonThemeData(
-          buttonColor: Colors.teal,
-          textTheme: ButtonTextTheme.primary,
-        ),
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-              fontSize: 36.0, fontWeight: FontWeight.bold, color: Colors.teal),
-          bodyLarge: TextStyle(fontSize: 18.0, color: Colors.tealAccent),
-        ),
+        primarySwatch: Colors.teal,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.teal,
             foregroundColor: Colors.white,
-            backgroundColor: Colors.teal, // Button text color
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12), // Rounded corners
-            ),
-            elevation: 5,
           ),
         ),
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.teal)
-            .copyWith(secondary: Colors.orange),
       ),
       home: const DatePickerScreen(),
     );
@@ -49,15 +34,15 @@ class DatePickerScreen extends StatefulWidget {
 class _DatePickerScreenState extends State<DatePickerScreen> {
   DateTime? _selectedDate;
 
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime? pickedDate = await showDatePicker(
+  void _pickDate() async {
+    final pickedDate = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime(2000),
-      lastDate: DateTime(2101),
+      lastDate: DateTime(2100),
     );
 
-    if (pickedDate != null && pickedDate != _selectedDate) {
+    if (pickedDate != null) {
       setState(() {
         _selectedDate = pickedDate;
       });
@@ -68,23 +53,22 @@ class _DatePickerScreenState extends State<DatePickerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Date Picker Example'),
-        backgroundColor: Colors.teal, // AppBar background color
+        title: const Text('Date Picker'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             ElevatedButton(
-              onPressed: () => _selectDate(context),
-              child: const Text('Select Date'),
+              onPressed: _pickDate,
+              child: const Text('Pick a Date'),
             ),
             const SizedBox(height: 20),
             Text(
               _selectedDate == null
                   ? 'No date selected!'
                   : 'Selected Date: ${_selectedDate!.toLocal().toString().split(' ')[0]}',
-              style: Theme.of(context).textTheme.bodyLarge,
+              style: const TextStyle(fontSize: 16),
             ),
           ],
         ),

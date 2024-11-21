@@ -8,7 +8,6 @@ class IconPageScreen extends StatelessWidget {
     Icons.chat,
     Icons.notifications,
     Icons.alarm,
-    // Add more icons here
   ];
 
   @override
@@ -37,8 +36,7 @@ class IconPageScreen extends StatelessWidget {
           final icon = icons[index];
           return GestureDetector(
             onTap: () {
-              // Handle icon selection here
-              Navigator.pop(context); // Close the icon page
+              Navigator.pop(context); 
             },
             child: Card(
               child: Center(

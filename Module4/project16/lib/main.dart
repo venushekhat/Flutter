@@ -100,12 +100,12 @@ class _CitySelectionScreenState extends State<CitySelectionScreen> {
             onPressed: _showCityDialog,
             style: ElevatedButton.styleFrom(
               foregroundColor: Colors.white,
-              backgroundColor: Colors.blueAccent, // Button text color
+              backgroundColor: Colors.blueAccent, 
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.0), // Rounded corners
+                borderRadius: BorderRadius.circular(12.0),
               ),
               padding: const EdgeInsets.symmetric(
-                  horizontal: 24.0, vertical: 12.0), // Button padding
+                  horizontal: 24.0, vertical: 12.0), 
               elevation: 5, // Button shadow
             ),
             child: const Text('Select City'),

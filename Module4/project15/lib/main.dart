@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
               TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
-      home: const HomeScreen(),
+      home: const Screen15(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Screen15 extends StatelessWidget {
+  const Screen15({super.key});
 
   void showCustomDialog(BuildContext context) {
     showDialog(
@@ -38,81 +38,50 @@ class HomeScreen extends StatelessWidget {
               const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           contentTextStyle: const TextStyle(color: Colors.white70),
           shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.zero, // Remove border radius
+            borderRadius: BorderRadius.zero,
           ),
-          contentPadding: const EdgeInsets.all(16.0), // Adjust content padding
-          actionsPadding: const EdgeInsets.all(8.0), // Adjust actions padding
-          actions: <Widget>[
-            Wrap(
-              alignment: WrapAlignment.center, // Center buttons
-              spacing: 8.0, // Space between buttons
+          actionsPadding: const EdgeInsets.all(8.0), 
+          actions: [
+            Row(
+              mainAxisAlignment:
+                  MainAxisAlignment.spaceEvenly, 
               children: [
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
-                    Fluttertoast.showToast(
-                      msg: "Negative button pressed",
-                      toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.BOTTOM,
-                      backgroundColor: Colors.red,
-                      textColor: Colors.white,
-                      fontSize: 16.0,
-                    );
+                    print("Cancel button pressed");
                   },
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.red,
                     padding: const EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 20.0),
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.zero, // No border radius
-                    ),
                   ),
                   child: const Text('Cancel'),
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
-                    Fluttertoast.showToast(
-                      msg: "Positive button pressed",
-                      toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.BOTTOM,
-                      backgroundColor: Colors.green,
-                      textColor: Colors.white,
-                      fontSize: 16.0,
-                    );
+                    print("OK button pressed");
                   },
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.green,
                     padding: const EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 20.0),
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.zero, // No border radius
-                    ),
                   ),
                   child: const Text('OK'),
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
-                    Fluttertoast.showToast(
-                      msg: "Neutral button pressed",
-                      toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.BOTTOM,
-                      backgroundColor: Colors.blue,
-                      textColor: Colors.white,
-                      fontSize: 16.0,
-                    );
+                    print("Maybe button pressed");
                   },
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.blue,
                     padding: const EdgeInsets.symmetric(
                         vertical: 10.0, horizontal: 20.0),
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.zero, // No border radius
-                    ),
                   ),
                   child: const Text('Maybe'),
                 ),
@@ -146,3 +115,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

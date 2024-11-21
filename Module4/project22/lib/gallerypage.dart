@@ -17,7 +17,7 @@ class GalleryPage extends StatelessWidget {
             crossAxisSpacing: 8.0,
             mainAxisSpacing: 8.0,
           ),
-          itemCount: 20, // Number of images
+          itemCount: 20, 
           itemBuilder: (context, index) {
             return Container(
               color: Colors.blueGrey[200],

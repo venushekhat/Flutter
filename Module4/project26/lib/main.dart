@@ -23,10 +23,10 @@ class ScreenA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent, // Background color
+      backgroundColor: Colors.lightBlueAccent, 
       appBar: AppBar(
         title: const Text('Screen A'),
-        backgroundColor: Colors.deepPurple, // AppBar color
+        backgroundColor: Colors.deepPurple, 
       ),
       body: Center(
         child: ElevatedButton(
@@ -38,7 +38,7 @@ class ScreenA extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             foregroundColor: Colors.white,
-            backgroundColor: Colors.orange, // Button text color
+            backgroundColor: Colors.orange, 
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             textStyle:
                 const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -56,10 +56,10 @@ class ScreenB extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pinkAccent, // Background color
+      backgroundColor: Colors.pinkAccent, 
       appBar: AppBar(
         title: const Text('Screen B'),
-        backgroundColor: Colors.indigo, // AppBar color
+        backgroundColor: Colors.indigo, 
       ),
       body: Center(
         child: ElevatedButton(
@@ -68,7 +68,7 @@ class ScreenB extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             foregroundColor: Colors.white,
-            backgroundColor: Colors.green, // Button text color
+            backgroundColor: Colors.green, 
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             textStyle:
                 const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

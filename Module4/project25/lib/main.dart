@@ -35,7 +35,6 @@ class _SplashScreenState extends State<SplashScreen> {
     _navigateToMainScreen();
   }
 
-  // Function to navigate to the main screen after a delay
   void _navigateToMainScreen() {
     Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
@@ -50,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.white,
       body: Center(
         child: Image.asset(
-            'assets/logo.png'), // Ensure you have this asset in your project
+            'assets/logo.png'), 
       ),
     );
   }

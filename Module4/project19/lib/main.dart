@@ -85,7 +85,6 @@ class HomeScreen extends StatelessWidget {
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
-                // Add your logout logic here
               },
               child: const Text('Cancel'),
             ),
@@ -111,7 +110,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profile'),
-        backgroundColor: Colors.deepPurple, // Attractive AppBar color
+        backgroundColor: Colors.deepPurple, 
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -131,7 +130,7 @@ class ProfileScreen extends StatelessWidget {
                   const CircleAvatar(
                     radius: 80,
                     backgroundImage: AssetImage(
-                        'assets/profile_picture.png'), // Replace with your image asset
+                        'assets/profile_picture.png'), 
                   ),
                   Positioned(
                     bottom: 0,
@@ -144,7 +143,6 @@ class ProfileScreen extends StatelessWidget {
                       child: IconButton(
                         icon: const Icon(Icons.edit, color: Colors.white),
                         onPressed: () {
-                          // Handle edit profile picture action
                         },
                       ),
                     ),
@@ -171,11 +169,10 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
-                  // Handle edit profile action
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.black,
-                  backgroundColor: Colors.amber, // Text color
+                  backgroundColor: Colors.amber, 
                   padding:
                       const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
                   shape: RoundedRectangleBorder(

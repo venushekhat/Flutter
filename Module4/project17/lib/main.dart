@@ -22,7 +22,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        // Show the alert dialog
         return await _showExitDialog(context);
       },
       child: Scaffold(
@@ -39,7 +38,7 @@ class HomeScreen extends StatelessWidget {
   Future<bool> _showExitDialog(BuildContext context) async {
     return showDialog<bool>(
       context: context,
-      barrierDismissible: false, // User must tap button to dismiss dialog
+      barrierDismissible: false, 
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Exit App'),
@@ -61,6 +60,6 @@ class HomeScreen extends StatelessWidget {
         );
       },
     ).then(
-        (value) => value ?? false); // If dialog returns null, default to false
+        (value) => value ?? false); 
   }
 }

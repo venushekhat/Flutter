@@ -36,7 +36,7 @@ class ItemCard extends StatelessWidget {
       elevation: 6.0,
       margin: const EdgeInsets.all(16.0),
       color:
-          const Color.fromARGB(255, 8, 15, 14), // Light teal color for the card
+          const Color.fromARGB(255, 8, 15, 14), 
       child: ListTile(
         contentPadding: const EdgeInsets.all(16.0),
         title: const Text(
@@ -44,7 +44,7 @@ class ItemCard extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(
-                255, 251, 254, 254), // Dark teal color for the title
+                255, 251, 254, 254), 
           ),
         ),
         subtitle: const Text('Item Description'),
@@ -89,16 +89,16 @@ class ItemCard extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: const Color.fromARGB(
-              255, 247, 241, 126), // Light teal background for the dialog
+              255, 247, 241, 126), 
           title: const Text('Edit Item',
               style: TextStyle(
                   color: Color.fromARGB(
-                      255, 241, 250, 118))), // Dark teal color for title
+                      255, 241, 250, 118))), 
           content: const Text('Edit details for the item.'),
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop(); 
               },
               child: const Text('Close', style: TextStyle(color: Colors.teal)),
             ),
@@ -114,15 +114,15 @@ class ItemCard extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: const Color.fromARGB(
-              255, 225, 245, 127), // Light teal background for the dialog
+              255, 225, 245, 127), 
           title: const Text('View Item',
               style:
-                  TextStyle(color: Colors.teal)), // Dark teal color for title
+                  TextStyle(color: Colors.teal)), 
           content: const Text('View details for the item.'),
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop(); 
               },
               child: const Text('Close', style: TextStyle(color: Colors.teal)),
             ),
@@ -138,22 +138,22 @@ class ItemCard extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: const Color.fromARGB(
-              255, 254, 254, 122), // Light teal background for the dialog
+              255, 254, 254, 122), 
           title: const Text('Confirm Delete',
               style:
-                  TextStyle(color: Colors.teal)), // Dark teal color for title
+                  TextStyle(color: Colors.teal)), 
           content: const Text('Are you sure you want to delete this item?'),
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop(); 
                 _showSnackbar(context, 'Item deleted');
               },
               child: const Text('Delete', style: TextStyle(color: Colors.red)),
             ),
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop(); 
               },
               child: const Text('Cancel', style: TextStyle(color: Colors.teal)),
             ),
@@ -167,7 +167,7 @@ class ItemCard extends StatelessWidget {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        backgroundColor: Colors.teal, // Teal color for the Snackbar background
+        backgroundColor: Colors.teal, 
         duration: const Duration(seconds: 2),
       ),
     );

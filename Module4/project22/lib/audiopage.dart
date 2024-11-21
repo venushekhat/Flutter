@@ -5,7 +5,6 @@ class AudioPage extends StatelessWidget {
   final List<Map<String, String>> audioTracks = [
     {'title': 'Track 1', 'artist': 'Artist 1', 'cover': 'assets/cover1.jpg'},
     {'title': 'Track 2', 'artist': 'Artist 2', 'cover': 'assets/cover2.jpg'},
-    // Add more tracks
   ];
 
   @override
@@ -27,7 +26,7 @@ class AudioPage extends StatelessWidget {
             subtitle: Text(track['artist']!),
             trailing: Icon(Icons.play_arrow),
             onTap: () {
-              // Handle audio playback
+        
             },
           );
         },
